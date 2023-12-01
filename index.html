@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" coontent="width=device-width,initial-scale=1.0">
+        <title>Personal portfolio website-Easy tutorials</title>
+        <link rel="stylesheet"href="style.css">
+        <script src="https://kit.fontawesome.com/ae78310fa9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCHq1UWCcfLzQK3PUMmOSCKy2Ucg0LA-ZA",
+              authDomain: "profit-view-001.firebaseapp.com",
+              projectId: "profit-view-001",
+              storageBucket: "profit-view-001.appspot.com",
+              messagingSenderId: "823026391167",
+              appId: "1:823026391167:web:8713ec512d92462c8ac74a",
+              measurementId: "G-Q404572CF3"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="Images/duncoh.jpg" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#contact">contacts</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#portfolio">portfolio</a></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>UI/UX Designer</p>
+                    <h1> Hi, I'M<span> Dancan</span><br>Wambua From Kenya</h1>
+                </div>
+            </div> 
+        </div>
+ <!-------about-------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/168.jpg" alt="Your Image Description">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">ABOUT ME</h1>
+                <p>
+                    I'm a highly skilled website developer with expertise in website testing, deployment, and management. I specialize in both front-end and back-end development of website features. With 13 years of experience, I have successfully developed over 100 websites, all with a 100% satisfaction rate.
+                </p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                        <li><span>Web Development</span><br>Web app development</li>
+                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br>UI/UX Designing Training at MMACHAKOS UNIVERSITY</li>
+                        <li><span>2021 - 2023</span><br>Team lead at Microsoft Windows</li>
+                        <li><span>2019 - 2021</span><br>Internship at Kenya Web Designers</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018 - 2019</span><br>Training at Nairobi Technical Institute</li>
+                        <li><span>2014 - 2018</span><br>Studied for Secondary Education at Ramba Boys High School</li>
+                        <li><span>2007 - 2014</span><br>Studied at Mulaha Primary School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function opentab(tabName) {
+        var i;
+        var tabcontent = document.getElementsByClassName("tab-contents");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        var tablinks = document.getElementsByClassName("tab-links");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
+
+
+
+                </div>
+            </div>
+        </div> 
+    </div>
+ </div>
+        
+     <!-------services---->
+ <div id="services">
+    <div .class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-brands fa-linkedin"></i>
+                <h2>web-Design</h2>
+                <p>Felix Onyango,i'm a very skilled web designer with many years of experince </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-regular fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p> I also deaal with front-end and back-end web development  </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-facebook"></i>
+                <h2>App-Design</h2>
+                <p> I develop customized websites according to clients specifications</p> 
+                <a href="#">learn more</a>
+            </div>
+        </div>
+         
+    </div>
+ </div>
+ <!---------portfolio----------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/download.jpeg">
+                <div class="layer">
+                    <h3>Social media App</h3>
+                    <p>The app connects you to the talented people on the world.Download it from play store. </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/211105_ctvbestpracticesforads_blog_meta_v01.png">
+                <div class="layer">
+                    <h3>online shopping App</h3>
+                    <p>The app connects you to the talented people on the world.Download it from play store. </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/00l8p1iqqfNP3HRG3TtTgXl-1.webp">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you to the talented people on the world.Download it from play store. </p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+    </div>
+    <!-------------contact---------->
+    <div  id="contact">
+        <div class="container">
+            <div class="row">
+                <div class=" t">
+                    <h1 class="sub-title"> Contact me</h1>
+                    <p> <i class="fa-sharp fa-solid fa-paper-plane"></i>contact @ wambuadancan249@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i>0742005549</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>  
+                        <a href=""><i class="fab fa-twitter-square "></i></a> 
+                        <a href=""><i class="fab fa-instagram"></i></a> 
+                        <a href=""><i class="fab fa-linkedin"></i></a>              
+                       </div> 
+                       <a href="Images/Atomic Habits by James Clear.pdf" ,Download class="btn btn2"> Download cv </a>
+                </div>
+                <div class="contact-right">
+                 <form>
+                        <input type="text" name="name" placeholder="your name" required>
+                        <input type="Email" name="Email" placeholder="your Email" required>
+                        <textarea name="message" rows="6" placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+
+
+                        
+                 </form>   
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ Dancan. made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+        </div>
+    </div>
+
+
+
+</div>
+ <script>
+var tablinks = document.getElementsByClassName("tab-linkS");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){ 
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.c.work:hovelassList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+ </script>
+ <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+ </script>
+    </body>
+</html>
